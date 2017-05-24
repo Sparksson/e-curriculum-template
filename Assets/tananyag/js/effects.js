@@ -1,18 +1,5 @@
 $(document).ready(function() {
 
-    $(".csikicsuki_fejlec").bind("click keydown", function(evt){
-        // $(this).next().slideToggle();
-
-        //melyik gomot nyomta le?
-        //1: egér bal gomb
-        //13:  ENTER
-        //32: SPACE
-        if($.inArray(evt.which, [1, 13, 32]) > -1 ) {
-            $(this).siblings(".csikicsuki_tartalom").slideToggle();
-        }
-    }).addClass("aktivfejlec").attr("tabindex","0").next().hide();
-
-
 	$(".feedback").hide();
 	
 	/* statements task -----------------------------------------*/
@@ -48,7 +35,7 @@ $(document).ready(function() {
 		$thisQ.find('.bAnswer').hide('fast');
 		$(".bAnswerR").hide('slow');
 		$thisQ.find('.rAnswerR').show('slow');
-	});
+    });
 	$('.TF .bAnswer').click(function(){
 		var $thisQ = $(this).parents('.TF');
 		$thisQ.children('.bAnswerR').show('slow');
