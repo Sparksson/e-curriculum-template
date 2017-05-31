@@ -2,17 +2,14 @@ $(document).ready(function() {
 
 	$(".feedback").hide();
 	
-	/* statements task -----------------------------------------*/
-
-	$(".statements.false").click(function() {
-		var $this = $(this);
-		//$this.hide(300);
-		//$this.animate({backgroundColor: "#FF0000"}, 500);
+    /* statements task -----------------------------------------*/
+    $(".statements.false").click(function () {
+        var $this = $(this);
 		$this.animate({
 			backgroundColor: jQuery.Color( "rgba(255,0,0, 0.3)" )
 		}, 200).hide("fast");
 	});
-	//console.log($(".statements.true"));
+
 	$(".statements.true").click(function(){
 		var $this = $(this);
 		var oColor = $this.css("background-color");
@@ -92,7 +89,7 @@ $(document).ready(function() {
 		var gapIDs = [];
 		var gapRightAnswer = [];
 		//var gaptexts = [];
-    $actualCloze.addClass("form-inline")
+        $actualCloze.addClass("form-inline")
 		$actualCloze.find("[data-gapnumber]").each(function(index){
 			//console.log($(this).text());
 			var gaptexts = (gapIDs[$(this).data('gapnumber')] == undefined) ? [] : gapIDs[$(this).data('gapnumber')];
@@ -106,9 +103,9 @@ $(document).ready(function() {
 		$actualCloze.find("span").each(function(gapindex) {
 			var $actualGap = $(this);
 			var gaptexts = (gapIDs[$(this).data('gapnumber')] == undefined) ? [] : gapIDs[$(this).data('gapnumber')];
-      gaptexts = shuffle(gaptexts);
+            gaptexts = shuffle(gaptexts);
 			var actualHTML = '<select class="form-control">';
-      for(var i=0; i<gaptexts.length; i++){
+            for(var i=0; i<gaptexts.length; i++){
 				actualHTML += '<option class="input-sm" value="'+gaptexts[i]+'">'+gaptexts[i]+'</option>';
 			}
 			actualHTML += '</select>';
@@ -116,23 +113,27 @@ $(document).ready(function() {
 		});
 		$actualCloze.find(".chk").click(function(){
 			//console.log(gapRightAnswer);
+            var voltrossz = false;
 			$actualCloze.find("select").each(function(selectindex) {
 				//console.log($(this).val());
 				var $thisSPAN = $(this).parents('.gap');
 				if(gapRightAnswer[selectindex] == $(this).val()){
 					console.log("OK");
-          $thisSPAN.find(".glyphicon").remove();
+                    $thisSPAN.find(".glyphicon").remove();
 					$thisSPAN.addClass("form-group has-feedback has-success");
 					$thisSPAN.append('<span class="glyphicon glyphicon-ok form-control-feedback"></span>');
-          $(this).attr("disabled", true);
-				}else{
+                    $(this).attr("disabled", true);
+                } else {
+                    voltrossz = true;
 					console.log("nemOK");
-          $thisSPAN.find(".glyphicon").remove();
+                    $thisSPAN.find(".glyphicon").remove();
 					$thisSPAN.addClass("form-group has-feedback has-error");
 					$thisSPAN.append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
 				}
 			});
-
+            if (!voltrossz) {
+                $actualCloze.find(".feedback").show("slow");
+            }
 
 		});
 

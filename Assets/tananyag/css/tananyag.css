@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 body { padding-bottom: 70px; }
 
@@ -285,6 +285,27 @@ kék: 439899
 */
 
 
-.imgdeftitle, .statements, .rAnswer, .bAnswer {
+.imgdeftitle, .statements, .rAnswer, .bAnswer, .click, .firstclick {
 	cursor: pointer;
+}
+
+
+.snippet {
+    position: relative;
+    overflow: visible;
+}
+
+.snippet:hover .btn {
+    opacity: 1;
+}
+
+.snippet .btn {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
 }

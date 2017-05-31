@@ -1,0 +1,658 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Minta oldal - Dinamikus elemek - Kód verzió</title>
+    <link href="../Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/bootstrap/css/simple-sidebar.css" rel="stylesheet">
+
+    <link href="../Assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/PhotoSwipe/css/photoswipe.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/PhotoSwipe/css/default-skin/default-skin.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/animate/animate.css" rel="stylesheet" type="text/css">
+
+    <link href="../Assets/highlight/styles/atom-one-light.css" rel="stylesheet" type="text/css">
+
+    <link href="../Assets/tananyag/css/tananyag.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- #wrapper / page wrapper -->
+    <div id="wrapper">
+        <!-- #sidebar-wrapper / SCORM navigation from imsmanifest.xml  -->
+        <nav id="sidebar-wrapper" class="navbar navbar-default" role="navigation">
+            <div class="sidebar-nav">
+                <ul class="nav navbar-nav" id="sitenavigation"></ul>
+            </div>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+        <!-- #page-content wrapper -->
+        <div id="page-content-wrapper">
+            <!-- .navbar / Navigation bar for the page -->
+            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container-fluid">
+                    <!-- .navbar-head /navigaton bar header -->
+                    <div class="navbar-header">
+                        <a href="#menu-toggle" class="btn btn-default navbar-btn" id="menu-toggle">Tartalom</a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationbar" aria-expanded="false">
+                            <span class="sr-only">Oldalnaviágció</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- /.navbar-header -->
+                    <!-- .navbar-collapse / navigation bar content (pre-next BTN + table-fig-h2 list)-->
+                    <div class="collapse navbar-collapse" id="navigationbar">
+                        <ul class="nav navbar-nav">
+                            <li class="disabled" id="preBTN"><a href="#">Vissza</a></li>
+                            <li class="disabled" id="nextBTN"><a href="#">Előre</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right" id="pagenavigation"></ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <!--  /.navbar-->
+            <!-- !!!DO NOT DELETE BEFORE PART!!! Begining of editable area -->
+
+            <div class="container-fluid">
+                <!-- Header of page start-->
+                <header>
+                    <div class="jumbotron">
+                        <h1>
+                            Minta oldal <br /><!-- Lesson title (1st level in the table of contents)-->
+                            <small>Dinamikus elemek</small><!--Chapter title (2nd level in the table of contents)-->
+                        </h1>
+                        <!-- Short summary of chapter -->
+                        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    </div>
+                </header>
+                <!-- Header of page end -->
+                <!-- Main content of page start -->
+                <main>
+                    <!-- 1st section start -->
+                    <section>
+                        <h2>Igaz-Hamis állítások</h2> <!-- section title -->
+                        <!--section content start -->
+                        <h3>Egyszerű felsorolásos igaz-hamis állítások</h3>
+                        <div class="Feladat">
+                            <p>Döntse el az alábbi állítások közül, hogy melyek igazak, és melyek hamisak. A hamis állítások eltűnnek!</p>
+                            <p class="statements true">Ez egy igaz állítás</p>
+                            <p class="statements false">Ez egy hamis állítás</p>
+                            <p class="statements true">Ez egy igaz állítás</p>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;D&ouml;ntse el az al&aacute;bbi &aacute;ll&iacute;t&aacute;sok k&ouml;z&uuml;l, hogy melyek igazak, &eacute;s melyek hamisak. A hamis &aacute;ll&iacute;t&aacute;sok eltűnnek!&lt;/p&gt;
+    &lt;p class=&quot;statements true&quot;&gt;Ez egy igaz &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+    &lt;p class=&quot;statements false&quot;&gt;Ez egy hamis &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+    &lt;p class=&quot;statements true&quot;&gt;Ez egy igaz &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <h3>Képi elemmel ellátott igaz-hamisfelsorolás</h3>
+                        <p>A példában a Bootstrap Media Object eleme kerül felhasználásra: <a target="_blank" href="http://getbootstrap.com/components/#media">http://getbootstrap.com/components/#media</a></p>
+                        <div class="Feladat">
+                            <p>Döntse el az alábbi állítások közül, hogy melyek igazak, és melyek hamisak. A hamis állítások eltűnnek!</p>
+                            <div class="media statements true">
+                                <div class="media-left media-middle">
+                                    <img src="./Pictures/pelda_kep.jpg" class="media-object img-thumbnail" width="100">
+                                </div>
+                                <div class="media-body">
+                                    <p>Ez egy igaz állítás</p>
+                                </div>
+                            </div>
+                            <div class="media statements false">
+                                <div class="media-left media-middle">
+                                    <img src="./Pictures/pelda_kep.jpg" class="media-object img-thumbnail" width="100">
+                                </div>
+                                <div class="media-body">
+                                    <p>Ez egy hamis állítás</p>
+                                </div>
+                            </div>
+                            <div class="media statements true">
+                                <div class="media-left media-middle">
+                                    <img src="./Pictures/pelda_kep.jpg" class="media-object img-thumbnail" width="100">
+                                </div>
+                                <div class="media-body">
+                                    <p>Ez egy igaz állítás</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;D&ouml;ntse el az al&aacute;bbi &aacute;ll&iacute;t&aacute;sok k&ouml;z&uuml;l, hogy melyek igazak, &eacute;s melyek hamisak. A hamis &aacute;ll&iacute;t&aacute;sok eltűnnek!&lt;/p&gt;
+    &lt;div class=&quot;media statements true&quot;&gt;
+        &lt;div class=&quot;media-left media-middle&quot;&gt;
+            &lt;img src=&quot;./Pictures/pelda_kep.jpg&quot; class=&quot;media-object img-thumbnail&quot; width=&quot;100&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;media-body&quot;&gt;
+            &lt;p&gt;Ez egy igaz &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;media statements false&quot;&gt;
+        &lt;div class=&quot;media-left media-middle&quot;&gt;
+            &lt;img src=&quot;./Pictures/pelda_kep.jpg&quot; class=&quot;media-object img-thumbnail&quot; width=&quot;100&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;media-body&quot;&gt;
+            &lt;p&gt;Ez egy hamis &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;media statements true&quot;&gt;
+        &lt;div class=&quot;media-left media-middle&quot;&gt;
+            &lt;img src=&quot;./Pictures/pelda_kep.jpg&quot; class=&quot;media-object img-thumbnail&quot; width=&quot;100&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;media-body&quot;&gt;
+            &lt;p&gt;Ez egy igaz &aacute;ll&iacute;t&aacute;s&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!--section content end -->
+                    </section>
+                    <!-- 1st section end -->
+                    <!-- 2st section start -->
+                    <section>
+                        <h2>Igaz-Hamis kérdés</h2> <!-- section title -->
+                        <!--section content start -->
+                        <p>A feladatnál a Bootstrap Panels eleme kerül felhasználásra: <a href="http://getbootstrap.com/components/#panels" target="_blank">http://getbootstrap.com/components/#panels</a></p>
+                        <div class="Feladat">
+                            <p>Igaz állítás vagyok?</p>
+                            <div class="TF">
+                                <button class="btn btn-default rAnswer">Igen</button>
+                                <button class="btn btn-default bAnswer">Nem</button>
+                                <div class="panel panel-warning bAnswerR">
+                                    <div class="panel-body">
+                                        <p>Rossz válasz esetén a visszajelzés</p>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success rAnswerR">
+                                    <div class="panel-body">
+                                        <p>Jó válasz esetén a visszajelzés</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Igaz &aacute;ll&iacute;t&aacute;s vagyok?&lt;/p&gt;
+    &lt;div class=&quot;TF&quot;&gt;
+        &lt;button class=&quot;btn btn-default rAnswer&quot;&gt;Igen&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default bAnswer&quot;&gt;Nem&lt;/button&gt;
+        &lt;div class=&quot;panel panel-warning bAnswerR&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                &lt;p&gt;Rossz v&aacute;lasz eset&eacute;n a visszajelz&eacute;s&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;panel panel-success rAnswerR&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                &lt;p&gt;J&oacute; v&aacute;lasz eset&eacute;n a visszajelz&eacute;s&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!--section content end -->
+                    </section>
+                    <!-- 2st section end -->
+                    <!-- 3st section start -->
+                    <section>
+                        <h2>Kattintásra sorrendben megjelenő elemek</h2> <!-- section title -->
+                        <!--section content start -->
+                        <h3>Kattintásra egymás alatt megjelenő mondatok!</h3>
+                        <div class="Feladat">
+                            <p>Kattintsunk az egyes bekezdésekre, hogy megjelenjen a következő!</p>
+                            <div class="clickorder">
+                                <p class="firstclick">Alapból látható mondat.</p>
+                                <p class="click" data-order="1">Először megjelenő mondat [data-order elem jelzi]</p>
+                                <p class="click" data-order="2">Másodszor megjelenő mondat [data-order elem jelzi]</p>
+                                <p class="click" data-order="3">Harmadszor megjelenő mondat [data-order elem jelzi]</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Kattintsunk az egyes bekezd&eacute;sekre, hogy megjelenjen a k&ouml;vetkező!&lt;/p&gt;
+    &lt;div class=&quot;clickorder&quot;&gt;
+        &lt;p class=&quot;firstclick&quot;&gt;Alapb&oacute;l l&aacute;that&oacute; mondat.&lt;/p&gt;
+        &lt;p class=&quot;click&quot; data-order=&quot;1&quot;&gt;Elősz&ouml;r megjelenő mondat [data-order elem jelzi]&lt;/p&gt;
+        &lt;p class=&quot;click&quot; data-order=&quot;2&quot;&gt;M&aacute;sodszor megjelenő mondat [data-order elem jelzi]&lt;/p&gt;
+        &lt;p class=&quot;click&quot; data-order=&quot;3&quot;&gt;Harmadszor megjelenő mondat [data-order elem jelzi]&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <h3>Kattintásra egymás alatt megjelenő képek</h3>
+                        <div class="Feladat">
+                            <p>Kattintsunk az egyes képekre, hogy felbukkanjon a következő kép!</p>
+                            <div class="clickorder">
+                                <div class="media media-img firstclick" style="margin:0"> <img class="img-responsive" src="Pictures/pelda_kep.jpg" width="480" height="65" alt="" /> </div>
+                                <div class="media media-img click" data-order="1" style="margin:0"> <img class="img-responsive" src="Pictures/pelda_kep.jpg" width="480" height="65" alt="" /> </div>
+                                <div class="media media-img click" data-order="2" style="margin:0"> <img class="img-responsive" src="Pictures/pelda_kep.jpg" width="480" height="65" alt="" /> </div>
+                                <div class="media media-img click" data-order="3" style="margin:0"> <img class="img-responsive" src="Pictures/pelda_kep.jpg" width="480" height="55" alt="" /></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Kattintsunk az egyes k&eacute;pekre, hogy felbukkanjon a k&ouml;vetkező k&eacute;p!&lt;/p&gt;
+    &lt;div class=&quot;clickorder&quot;&gt;
+        &lt;div class=&quot;media media-img firstclick&quot; style=&quot;margin:0&quot;&gt; 
+            &lt;img class=&quot;img-responsive&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;480&quot; height=&quot;65&quot; alt=&quot;&quot; /&gt; 
+        &lt;/div&gt;
+        &lt;div class=&quot;media media-img click&quot; data-order=&quot;1&quot; style=&quot;margin:0&quot;&gt; 
+            &lt;img class=&quot;img-responsive&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;480&quot; height=&quot;65&quot; alt=&quot;&quot; /&gt; 
+        &lt;/div&gt;
+        &lt;div class=&quot;media media-img click&quot; data-order=&quot;2&quot; style=&quot;margin:0&quot;&gt; 
+            &lt;img class=&quot;img-responsive&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;480&quot; height=&quot;65&quot; alt=&quot;&quot; /&gt; 
+        &lt;/div&gt;
+        &lt;div class=&quot;media media-img click&quot; data-order=&quot;3&quot; style=&quot;margin:0&quot;&gt; 
+            &lt;img class=&quot;img-responsive&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;480&quot; height=&quot;55&quot; alt=&quot;&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    <!--section content end -->
+                    </section>
+                    <!-- 3st section end -->
+                    <!-- 4st section start -->
+                    <section>
+                        <h2>Képhez tartozó másik elem megjelenítése</h2> <!-- section title -->
+                        <!--section content start -->
+                        <p>A példában a Bootstrap Media Object eleme kerül felhasználásra: <a target="_blank" href="http://getbootstrap.com/components/#media">http://getbootstrap.com/components/#media</a></p>
+                        <div class="Feladat">
+                            <p>Kattints a képekre a kapcsolódó leírás megjelenítéséhez.</p>
+                            <div class="media imgdef">
+                                <div class="media-left imgdeftitle"> <img src="Pictures/pelda_kep.jpg" class="media-object img-thumbnail" style="width:130px"></div>
+                                <div class="media-body imgdefbody">
+                                    <h4 class="media-heading">Kapcsolódó leírás címe (Nem kötelező elem)</h4>
+                                    <p>Kapcsolódó leírás tartalma.</p>
+                                </div>
+                            </div>
+                            <div class="media imgdef">
+                                <div class="media-left imgdeftitle"> <img src="Pictures/pelda_kep.jpg" class="media-object img-thumbnail" style="width:130px"></div>
+                                <div class="media-body imgdefbody">
+                                    <h4 class="media-heading">Kapcsolódó leírás címe (Nem kötelező elem)</h4>
+                                    <p>Kapcsolódó leírás tartalma.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Kattints a k&eacute;pekre a kapcsol&oacute;d&oacute; le&iacute;r&aacute;s megjelen&iacute;t&eacute;s&eacute;hez.&lt;/p&gt;
+    &lt;div class=&quot;media imgdef&quot;&gt;
+        &lt;div class=&quot;media-left imgdeftitle&quot;&gt; 
+            &lt;img src=&quot;Pictures/pelda_kep.jpg&quot; class=&quot;media-object img-thumbnail&quot; style=&quot;width:130px&quot;
+        &gt;&lt;/div&gt;
+        &lt;div class=&quot;media-body imgdefbody&quot;&gt;
+            &lt;h4 class=&quot;media-heading&quot;&gt;Kapcsol&oacute;d&oacute; le&iacute;r&aacute;s c&iacute;me (Nem k&ouml;telező elem)&lt;/h4&gt;
+            &lt;p&gt;Kapcsol&oacute;d&oacute; le&iacute;r&aacute;s tartalma.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;media imgdef&quot;&gt;
+        &lt;div class=&quot;media-left imgdeftitle&quot;&gt; 
+            &lt;img src=&quot;Pictures/pelda_kep.jpg&quot; class=&quot;media-object img-thumbnail&quot; style=&quot;width:130px&quot;
+        &gt;&lt;/div&gt;
+        &lt;div class=&quot;media-body imgdefbody&quot;&gt;
+            &lt;h4 class=&quot;media-heading&quot;&gt;Kapcsol&oacute;d&oacute; le&iacute;r&aacute;s c&iacute;me (Nem k&ouml;telező elem)&lt;/h4&gt;
+            &lt;p&gt;Kapcsol&oacute;d&oacute; le&iacute;r&aacute;s tartalma.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!--section content end -->
+                    </section>
+                    <!-- 4st section end -->
+                    <!-- 5th section start -->
+                    <section>
+                        <h2>Mondatkiegészítős feladatok</h2>
+                        <h3>Manuális értéklistából történő kiegészítés</h3>
+                        <div class="Feladat">
+                            <p>Egészítsük ki a mondatot!</p>
+                            <div class="dropList">
+                                <p>A lenyiló listában a <span class="list" data-listitem="helytelen érték1~helytelen érték2~helytelen érték3">helyes érték</span> adatot kell választani, hogy <span class="list" data-listitem="helytelen1~helytelen2~helytelen3">helyes</span> eredményt kapjunk.</p>
+                                <button class="btn btn-default btn-block chk">Ellenőrzés</button>
+                                <div class="feedback"> 
+                                    <p>Ide elhelyezhető a helyes megoldás esetén megjelenő visszajelzés (kép, szöveg, video, stb.) Nem kötelező használni!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Eg&eacute;sz&iacute;ts&uuml;k ki a mondatot!&lt;/p&gt;
+    &lt;div class=&quot;dropList&quot;&gt;
+        &lt;p&gt;A lenyil&oacute; list&aacute;ban a &lt;span class=&quot;list&quot; data-listitem=&quot;helytelen &eacute;rt&eacute;k1~helytelen &eacute;rt&eacute;k2~helytelen &eacute;rt&eacute;k3&quot;&gt;helyes &eacute;rt&eacute;k&lt;/span&gt; adatot kell v&aacute;lasztani, hogy &lt;span class=&quot;list&quot; data-listitem=&quot;helytelen1~helytelen2~helytelen3&quot;&gt;helyes&lt;/span&gt; eredm&eacute;nyt kapjunk.&lt;/p&gt;
+        &lt;button class=&quot;btn btn-default btn-block chk&quot;&gt;Ellenőrz&eacute;s&lt;/button&gt;
+        &lt;div class=&quot;feedback&quot;&gt; 
+            &lt;p&gt;Ide elhelyezhető a helyes megold&aacute;s eset&eacute;n megjelenő visszajelz&eacute;s (k&eacute;p, sz&ouml;veg, video, stb.) Nem k&ouml;telező haszn&aacute;lni!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <h3>Többi listából kialakított értéklistás kiegészítés</h3>
+                        <div class="Feladat">
+                            <p>Egészítsük ki a mondatokat.</p>
+                            <div class="cloze">
+                                <p>Ide kerül <span class="gap" data-gapnumber="1">első mondat első hiányzó szava</span>, azaz <span class="gap" data-gapnumber="2">1/1</span></p>
+                                <p>Ide kerül <span class="gap" data-gapnumber="1">második mondat mondat első hiányzó szava</span>, azaz <span class="gap" data-gapnumber="2">2/1</span></p>
+                                <p>Ide kerül <span class="gap" data-gapnumber="1">harmadik mondat első hiányzó szava</span>, azaz <span class="gap" data-gapnumber="2">3/1</span></p>
+                                <p>Ide nem írjuk ki betűvel, csak számmal, azaz <span class="gap" data-gapnumber="2">4/1</span></p>
+                                <p>Ide csak betűvel írjuk ki, azaz <span class="gap" data-gapnumber="1">ötödik mondat első hiányzó szava</span></p>
+                                <p>Lehet üres szöveg is, melyben pl. leírjuk hogy a [data-gapnumber]-hez írt szám adja meg a lehetséges értékcsoportokat.</p>
+                                <button class="btn btn-default btn-block chk">Ellenőrzés</button>
+                                <div class="feedback">
+                                    <p>Ide elhelyezhető a helyes megoldás esetén megjelenő visszajelzés (kép, szöveg, video, stb.) Nem kötelező használni!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Eg&eacute;sz&iacute;ts&uuml;k ki a mondatokat.&lt;/p&gt;
+    &lt;div class=&quot;cloze&quot;&gt;
+        &lt;p&gt;Ide ker&uuml;l &lt;span class=&quot;gap&quot; data-gapnumber=&quot;1&quot;&gt;első mondat első hi&aacute;nyz&oacute; szava&lt;/span&gt;, azaz &lt;span class=&quot;gap&quot; data-gapnumber=&quot;2&quot;&gt;1/1&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Ide ker&uuml;l &lt;span class=&quot;gap&quot; data-gapnumber=&quot;1&quot;&gt;m&aacute;sodik mondat mondat első hi&aacute;nyz&oacute; szava&lt;/span&gt;, azaz &lt;span class=&quot;gap&quot; data-gapnumber=&quot;2&quot;&gt;2/1&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Ide ker&uuml;l &lt;span class=&quot;gap&quot; data-gapnumber=&quot;1&quot;&gt;harmadik mondat első hi&aacute;nyz&oacute; szava&lt;/span&gt;, azaz &lt;span class=&quot;gap&quot; data-gapnumber=&quot;2&quot;&gt;3/1&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Ide nem &iacute;rjuk ki betűvel, csak sz&aacute;mmal, azaz &lt;span class=&quot;gap&quot; data-gapnumber=&quot;2&quot;&gt;4/1&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Ide csak betűvel &iacute;rjuk ki, azaz &lt;span class=&quot;gap&quot; data-gapnumber=&quot;1&quot;&gt;&ouml;t&ouml;dik mondat első hi&aacute;nyz&oacute; szava&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Lehet &uuml;res sz&ouml;veg is, melyben pl. le&iacute;rjuk hogy a [data-gapnumber]-hez &iacute;rt sz&aacute;m adja meg a lehets&eacute;ges &eacute;rt&eacute;kcsoportokat.&lt;/p&gt;
+        &lt;button class=&quot;btn btn-default btn-block chk&quot;&gt;Ellenőrz&eacute;s&lt;/button&gt;
+        &lt;div class=&quot;feedback&quot;&gt; 
+            &lt;p&gt;Ide elhelyezhető a helyes megold&aacute;s eset&eacute;n megjelenő visszajelz&eacute;s (k&eacute;p, sz&ouml;veg, video, stb.) Nem k&ouml;telező haszn&aacute;lni!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+                    <!-- 5th section end -->
+                    <!-- 6th section start -->
+                    <section>
+                        <h2>Fogd és vidd feladat</h2>
+                        <h3>Két oszlopos megoldás</h3>
+                        <p>A megoldáshoz a Bootstrap grid technikáját alkalmazzuk!</p>
+                        <div class="Feladat">
+                            <p>Húzzuk az egyes állításokat a megfelelő oszlopba <em>(Amennyiben a megfelelő helyre húztuk az elemet, eltűnik, és jön a következő állítás. Ha az összes elemet a helyére húztuk megtekinthetjük a teljes megoldást!)</em></p>
+                            <div class="cards">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p>Első csoport fejléce</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p>Második csoport fejléce</p>
+                                    </div>
+                                </div>
+                                <div class="row cardSlots">
+                                    <div class="col-xs-6">
+                                        <div class="slot" data-cardnumber="1" style="width:90%; height:70px">&nbsp;</div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="slot" data-cardnumber="2" style="width:90%; height:70px">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cardPile">
+                                    <div class="col-xs-6 col-xs-offset-3">
+                                        <p class="card" data-cardnumber="1" data-order="1" style="width:90%">első csoportba húzandó [data-cardnumber], először megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="2" data-order="2" style="width:90%">második csoportba húzandó [data-cardnumber], másodszor megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="1" data-order="3" style="width:90%">első csoportba húzandó [data-cardnumber], harmadszor megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="2" data-order="4" style="width:90%">második csoportba húzandó [data-cardnumber], negyedszer megjelenő [data-order]</p>
+                                    </div>
+                                </div>
+                                <div class="row cardResult">
+                                    <div class="col-xs-6">
+                                        <p>első csoportba húzandó [data-cardnumber], először megjelenő [data-order]</p>
+                                        <p>első csoportba húzandó [data-cardnumber], harmadszor megjelenő [data-order]</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p>második csoportba húzandó [data-cardnumber], másodszor megjelenő [data-order]</p>
+                                        <p>második csoportba húzandó [data-cardnumber], negyedszer megjelenő [data-order]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;H&uacute;zzuk az egyes &aacute;ll&iacute;t&aacute;sokat a megfelelő oszlopba &lt;em&gt;(Amennyiben a megfelelő helyre h&uacute;ztuk az elemet, eltűnik, &eacute;s j&ouml;n a k&ouml;vetkező &aacute;ll&iacute;t&aacute;s. Ha az &ouml;sszes elemet a hely&eacute;re h&uacute;ztuk megtekinthetj&uuml;k a teljes megold&aacute;st!)&lt;/em&gt;&lt;/p&gt;
+    &lt;div class=&quot;cards&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;p&gt;Első csoport fejl&eacute;ce&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;p&gt;M&aacute;sodik csoport fejl&eacute;ce&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardSlots&quot;&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;div class=&quot;slot&quot; data-cardnumber=&quot;1&quot; style=&quot;width:90%; height:70px&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;div class=&quot;slot&quot; data-cardnumber=&quot;2&quot; style=&quot;width:90%; height:70px&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardPile&quot;&gt;
+            &lt;div class=&quot;col-xs-6 col-xs-offset-3&quot;&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;1&quot; data-order=&quot;1&quot; style=&quot;width:90%&quot;&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], elősz&ouml;r megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;2&quot; data-order=&quot;2&quot; style=&quot;width:90%&quot;&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], m&aacute;sodszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;1&quot; data-order=&quot;3&quot; style=&quot;width:90%&quot;&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], harmadszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;2&quot; data-order=&quot;4&quot; style=&quot;width:90%&quot;&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], negyedszer megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardResult&quot;&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;p&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], elősz&ouml;r megjelenő [data-order]&lt;/p&gt;
+                &lt;p&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], harmadszor megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-6&quot;&gt;
+                &lt;p&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], m&aacute;sodszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], negyedszer megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <h3>Három oszlopos megoldás</h3>
+                        <p>A megoldáshoz a Bootstrap grid technikáját alkalmazzuk!</p>
+                        <div class="Feladat">
+                            <p>Húzzuk az egyes állításokat a megfelelő oszlopba <em>(Amennyiben a megfelelő helyre húztuk az elemet, eltűnik, és jön a következő állítás. Ha az összes elemet a helyére húztuk megtekinthetjük a teljes megoldást!)</em></p>
+                            <div class="cards">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <p>Első csoport fejléce</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>Második csoport fejléce</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>Harmadik csoport fejléce</p>
+                                    </div>
+                                </div>
+                                <div class="row cardSlots">
+                                    <div class="col-xs-4">
+                                        <div class="slot" data-cardnumber="1" style="width:90%; height:70px">&nbsp;</div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="slot" data-cardnumber="2" style="width:90%; height:70px">&nbsp;</div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="slot" data-cardnumber="3" style="width:90%; height:70px">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cardPile">
+                                    <div class="col-xs-4 col-xs-offset-4">
+                                        <p class="card" data-cardnumber="1" data-order="1" style="width:90%">első csoportba húzandó [data-cardnumber], először megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="2" data-order="2" style="width:90%">második csoportba húzandó [data-cardnumber], másodszor megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="3" data-order="3" style="width:90%">harmadik csoportba húzandó [data-cardnumber], harmadszor megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="3" data-order="4" style="width:90%">harmadik csoportba húzandó [data-cardnumber], negyedszer megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="2" data-order="5" style="width:90%">második csoportba húzandó [data-cardnumber], ötödször megjelenő [data-order]</p>
+                                        <p class="card" data-cardnumber="1" data-order="6" style="width:90%">első csoportba húzandó [data-cardnumber], hatodszor megjelenő [data-order]</p>
+                                    </div>
+                                </div>
+                                <div class="row cardResult">
+                                    <div class="col-xs-4">
+                                        <p>első csoportba húzandó [data-cardnumber], először megjelenő [data-order]</p>
+                                        <p>első csoportba húzandó [data-cardnumber], hatodszor megjelenő [data-order]</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>második csoportba húzandó [data-cardnumber], másodszor megjelenő [data-order]</p>
+                                        <p>második csoportba húzandó [data-cardnumber], ötödször megjelenő [data-order]</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>harmadik csoportba húzandó [data-cardnumber], harmadszor megjelenő [data-order]</p>
+                                        <p>harmadik csoportba húzandó [data-cardnumber], negyedszer megjelenő [data-order]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;H&uacute;zzuk az egyes &aacute;ll&iacute;t&aacute;sokat a megfelelő oszlopba &lt;em&gt;(Amennyiben a megfelelő helyre h&uacute;ztuk az elemet, eltűnik, &eacute;s j&ouml;n a k&ouml;vetkező &aacute;ll&iacute;t&aacute;s. Ha az &ouml;sszes elemet a hely&eacute;re h&uacute;ztuk megtekinthetj&uuml;k a teljes megold&aacute;st!)&lt;/em&gt;&lt;/p&gt;
+    &lt;div class=&quot;cards&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;Első csoport fejl&eacute;ce&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;M&aacute;sodik csoport fejl&eacute;ce&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;Harmadik csoport fejl&eacute;ce&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardSlots&quot;&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;div class=&quot;slot&quot; data-cardnumber=&quot;1&quot; style=&quot;width:90%; height:70px&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;div class=&quot;slot&quot; data-cardnumber=&quot;2&quot; style=&quot;width:90%; height:70px&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;div class=&quot;slot&quot; data-cardnumber=&quot;3&quot; style=&quot;width:90%; height:70px&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardPile&quot;&gt;
+            &lt;div class=&quot;col-xs-4 col-xs-offset-4&quot;&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;1&quot; data-order=&quot;1&quot; style=&quot;width:90%&quot;&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], elősz&ouml;r megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;2&quot; data-order=&quot;2&quot; style=&quot;width:90%&quot;&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], m&aacute;sodszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;3&quot; data-order=&quot;3&quot; style=&quot;width:90%&quot;&gt;harmadik csoportba h&uacute;zand&oacute; [data-cardnumber], harmadszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;3&quot; data-order=&quot;4&quot; style=&quot;width:90%&quot;&gt;harmadik csoportba h&uacute;zand&oacute; [data-cardnumber], negyedszer megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;2&quot; data-order=&quot;5&quot; style=&quot;width:90%&quot;&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], &ouml;t&ouml;dsz&ouml;r megjelenő [data-order]&lt;/p&gt;
+                &lt;p class=&quot;card&quot; data-cardnumber=&quot;1&quot; data-order=&quot;6&quot; style=&quot;width:90%&quot;&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], hatodszor megjelenő [data-order]&lt;/p&gt;                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row cardResult&quot;&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], elősz&ouml;r megjelenő [data-order]&lt;/p&gt;
+                &lt;p&gt;első csoportba h&uacute;zand&oacute; [data-cardnumber], hatodszor megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], m&aacute;sodszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p&gt;m&aacute;sodik csoportba h&uacute;zand&oacute; [data-cardnumber], &ouml;t&ouml;dsz&ouml;r megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs-4&quot;&gt;
+                &lt;p&gt;harmadik csoportba h&uacute;zand&oacute; [data-cardnumber], harmadszor megjelenő [data-order]&lt;/p&gt;
+                &lt;p&gt;harmadik csoportba h&uacute;zand&oacute; [data-cardnumber], negyedszer megjelenő [data-order]&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+                    <!-- 6th section end -->
+                </main>
+                <!-- Main content of page end -->
+
+            </div>
+            <!-- /#page-content wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+
+
+    <!-- !!!DO NOT DELETE AFTER PART!!! End of editable area & Beginning of Extensions for page-->
+    <!-- SCORM API -->
+    <script type="text/javascript" src="../Assets/SCORM/SCORM_API_wrapper.js"></script>
+    <script type="text/javascript" src="../Assets/SCORM/SCOFunctions.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../Assets/jQuery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../Assets/jQuery/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="../Assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- PhotoSwipe -->
+    <script type="text/javascript" src="../Assets/PhotoSwipe/js/photoswipe.min.js"></script>
+    <script type="text/javascript" src="../Assets/PhotoSwipe/js/photoswipe-ui-default.min.js"></script>
+    <!-- Page modifier -->
+    <script type="text/javascript" src="../Assets/tananyag/js/page_modifier.js"></script>
+    <!-- effects -->
+    <script type="text/javascript" src="../Assets/tananyag/js/effects.js"></script>
+
+    <!-- PhotoSwipe content -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe.
+        It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <div class="pswp__container">
+                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <!--<button class="pswp__button pswp__button--share" title="Share"></button>-->
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../Assets/PhotoSwipe/js/init_photoswipe.js"></script>
+    <!-- PhotoSwipe content end-->
+
+    <script src="../Assets/highlight/highlight.pack.js"></script>
+    <script src="../Assets/clipboard/clipboard.min.js"></script>
+    <script src="../Assets/clipboard/snippets.min.js"></script>
+
+    <script type="text/javascript">
+        function popUp(URL, W, H) {
+            day = new Date();
+            id = day.getTime();
+            eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=" + W + ",height=" + H + ",left = 0,top = 0');");
+        }
+
+        $(document).ready(function (e) {
+            console.log("betöltődött");
+            loadPage();
+        });
+
+        $(window).on("unload", function (e) {
+            console.log("kitöltődött");
+            unloadPage();
+        });
+    </script>
+
+</body>
+</html>

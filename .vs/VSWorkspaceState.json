@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Assets",
+    "\\Assets\\clipboard",
+    "\\Assets\\highlight",
+    "\\Assets\\tananyag",
+    "\\Assets\\tananyag\\css",
+    "\\Assets\\tananyag\\js",
     "\\Content"
   ],
-  "SelectedNode": "\\Content\\minta.html",
-  "PreviewInSolutionExplorer": false
+  "PreviewInSolutionExplorer": true
 }

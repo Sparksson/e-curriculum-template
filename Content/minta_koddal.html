@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Minta oldal - Statikus elemek</title>
+    <title>Minta oldal - Statikus elemek - Kód verzió</title>
     <link href="../Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../Assets/bootstrap/css/simple-sidebar.css" rel="stylesheet">
 
@@ -14,6 +14,7 @@
     <link href="../Assets/highlight/styles/atom-one-light.css" rel="stylesheet" type="text/css">
 
     <link href="../Assets/tananyag/css/tananyag.css" rel="stylesheet" type="text/css">
+
 
 </head>
 
@@ -60,7 +61,6 @@
 
             <div class="container-fluid">
 
-
                 <header>
                     <div class="jumbotron">
                         <h1>
@@ -71,28 +71,73 @@
                 </header>
                 <main>
                     <section>
-                        <h2>Bekezdés illetve burkoló [div] elemek (Alcím 1)</h2>
+                        <h2>Bekezdés illetve burkoló [div] elemek</h2>
                         <p>Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. Egyszerű bekezdés. </p>
+
+                        <!--Fontos bekezdés-->
                         <div class="Fontos">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Fontos&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!--Megjegyzés bekezdés-->
                         <div class="Megjegyzés">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Megjegyz&eacute;s&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!--Definíciós bekezdés-->
                         <div class="Definíció">
                             <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Defin&iacute;ci&oacute;&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!--Példa bekezdés-->
                         <div class="Példa">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;P&eacute;lda&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!--Feladat bekezdés-->
                         <div class="Feladat">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Feladat&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!--Videó bekezdés-->
                         <div class="Videó">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo re et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <video controls>
                                 <source src="movie.mp4" type="video/mp4">
                             </video>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Vide&oacute;&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+    &lt;video controls&gt;
+        &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </section>
 
@@ -103,6 +148,12 @@
                             <p>Idézett bekezdés szövege. Idézett bekezdés szövege. Idézett bekezdés szövege. Idézett bekezdés szövege. Idézett bekezdés szövege. </p>
                             <footer>Forrás: <cite title="Source Title">Source Title</cite></footer>
                         </blockquote>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html"> &lt;blockquote class=&quot;blockquote-reverse&quot;&gt;
+    &lt;p&gt;Id&eacute;zett bekezd&eacute;s sz&ouml;vege. Id&eacute;zett bekezd&eacute;s sz&ouml;vege. Id&eacute;zett bekezd&eacute;s sz&ouml;vege. Id&eacute;zett bekezd&eacute;s sz&ouml;vege. Id&eacute;zett bekezd&eacute;s sz&ouml;vege. &lt;/p&gt;
+    &lt;footer&gt;Forr&aacute;s: &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+                        </div>
                     </section>
 
                     <section>
@@ -122,13 +173,16 @@ for (x in person) {
     txt += person[x] + &amp;quot; &amp;quot;;
 }&lt;/code&gt;&lt;/pre&gt;</code></pre>
                         </div>
-                        <p>A kód típusú elemek <code>&lt;code&gt;</code> html elemként viendőek fel. Ennek megfeleőn akár utasítások is megjelölhetőek: <code>SELECT * FROM tabla;</code></p>
-
+                        <p>A kód típusú elemek <code>&lt;code&gt;</code> html elemként viendőek fel, amennyiben azok nem forráskódként jelennek meg. Azaz sorkozi elemek leszenk. Ennek megfeleőn akár utasítások is megjelölhetőek: <code>SELECT * FROM tabla;</code></p>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;p&gt;A k&oacute;d t&iacute;pus&uacute; elemek &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; html elemk&eacute;nt jel&ouml;lendők.
+Utas&iacute;t&aacute;sok szint&eacute;n &iacute;gy: &lt;code&gt;SELECT * FROM tabla;&lt;/code&gt;&lt;/p&gt;</code></pre>
+                        </div>
                     </section>
 
 
                     <section>
-                        <h2>Sorközi elemek (Alcím 2)</h2>
+                        <h2>Sorközi elemek</h2>
                         <p>Billentyűkombinációk esetén a <code>&lt;kbd&gt;</code> html elem használandó: Mentéshez használjuk a <kbd>CTRL + S</kbd> billentyűkombinációt.</p>
                         <p>Egy program minta kimenetének jelölésére a <code>&lt;samp&gt;</code> html elem használandó: <samp>Ez egy program által jelzett eredmény: 42</samp>.</p>
                         <p>Amennyiben valamilyen változókat akarunk megjelölni, a <code>&lt;var&gt;</code> html elemre lesz szükségünk: <var>y</var> = <var>m</var><var>x</var> + <var>b</var>.</p>
@@ -136,6 +190,13 @@ for (x in person) {
                             Amennyiben egy bekezdésen belül szeretnénk egy mondatot megjelölni, kiemelni, úgy használjuk <code>&lt;mark&gt;</code> html elemet.
                             <mark>Ez a mondat kiemelésre került.</mark> Ez pedig nem került kiemelésre.
                         </p>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;p&gt; Ment&eacute;shez haszn&aacute;ljuk a &lt;kbd&gt;CTRL + S&lt;/kbd&gt; billentyűkombin&aacute;ci&oacute;t.&lt;/p&gt;
+&lt;p&gt;&lt;samp&gt;Ez egy program &aacute;ltal jelzett eredm&eacute;ny: 42&lt;/samp&gt;&lt;/p&gt;
+&lt;p&gt;&lt;var&gt;y&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt;&lt;var&gt;x&lt;/var&gt; + &lt;var&gt;b&lt;/var&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Ez a mondat kiemel&eacute;sre ker&uuml;lt.&lt;/mark&gt; Ez pedig nem ker&uuml;lt kiemel&eacute;sre.&lt;/p&gt;</code></pre>
+                        </div>
+
                     </section>
 
                     <section>
@@ -149,6 +210,13 @@ for (x in person) {
                             <dt>Fogalom3</dt>
                             <dd>A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió.</dd>
                         </dl>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;dl class=&quot;dl-horizontal&quot;&gt;
+    &lt;dt&gt;Fogalom1&lt;/dt&gt;&lt;dd&gt;A fogalom1-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+    &lt;dt&gt;Fogalom2&lt;/dt&gt;&lt;dd&gt;A fogalom2-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+    &lt;dt&gt;Fogalom3&lt;/dt&gt;&lt;dd&gt;A fogalom3-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                        </div>
                         <p>Használhatjuk a definíciós blokkon [div] belül is:</p>
                         <div class="Definíció">
                             <dl class="dl-horizontal">
@@ -159,6 +227,15 @@ for (x in person) {
                                 <dt>Fogalom3</dt>
                                 <dd>A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió. A fogalom3-hez tartozó definínió.</dd>
                             </dl>
+                        </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;Defin&iacute;ci&oacute;&quot;&gt;
+    &lt;dl class=&quot;dl-horizontal&quot;&gt;
+        &lt;dt&gt;Fogalom1&lt;/dt&gt;&lt;dd&gt;A fogalom1-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+        &lt;dt&gt;Fogalom2&lt;/dt&gt;&lt;dd&gt;A fogalom2-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+        &lt;dt&gt;Fogalom3&lt;/dt&gt;&lt;dd&gt;A fogalom3-hez tartoz&oacute; defin&iacute;ni&oacute;.&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </section>
 
@@ -195,6 +272,39 @@ for (x in person) {
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;table class=&quot;table table-striped table-hover&quot;&gt;
+    &lt;caption&gt;T&aacute;bl&aacute;zat felirat (opion&aacute;lis)&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Oszlop fejl&eacute;c&lt;/th&gt;
+            &lt;th&gt;Oszlop fejl&eacute;c&lt;/th&gt;
+            &lt;th&gt;Oszlop fejl&eacute;c&lt;/th&gt;
+	    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+            &lt;td&gt;Cellatartalom&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
                     </section>
 
                     <section>
@@ -205,11 +315,21 @@ for (x in person) {
                             <img class="img-thumbnail" src="Pictures/pelda_kep.jpg" width="800" height="390" alt="" />
                             <figcaption>Ez egy képhez tartozó képaláírás</figcaption>
                         </figure>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;figure class=&quot;media media-img&quot;&gt;
+    &lt;img class=&quot;img-thumbnail&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;800&quot; height=&quot;390&quot; alt=&quot;&quot;/&gt;
+    &lt;figcaption&gt;Ez egy k&eacute;phez tartoz&oacute; k&eacute;pal&aacute;&iacute;r&aacute;s&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                        </div>
                         <p>Abban az esetben, ha nincs képalairás, azaz  csak egy illusztráció</p>
                         <div class="media media-img">
                             <img class="img-thumbnail" src="Pictures/pelda_kep.jpg" width="800" height="390" alt="" />
                         </div>
-
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;media media-img&quot;&gt;
+    &lt;img class=&quot;img-thumbnail&quot; src=&quot;Pictures/pelda_kep.jpg&quot; width=&quot;800&quot; height=&quot;390&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
                         <h3>Nagyitós kép</h3>
                         <div class="gallery">
                             <figure class="media media-img">
@@ -220,6 +340,18 @@ for (x in person) {
                                 <figcaption>A nagyítós képhez tartozó képaláírás</figcaption>
                             </figure>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;gallery&quot;&gt;
+    &lt;figure class=&quot;media media-img&quot;&gt;
+        &lt;a href=&quot;Pictures/pelda_kep2_nagy.png&quot; data-size=&quot;3000x2900&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot; alt=&quot;&quot; /&gt;
+        &lt;/a&gt;
+        &lt;span class=&quot;glyphicon glyphicon-zoom-in zoom-btn&quot;&gt;&lt;/span&gt;
+        &lt;figcaption&gt;A nagy&iacute;t&oacute;s k&eacute;phez tartoz&oacute; k&eacute;pal&aacute;&iacute;r&aacute;s&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
                         <h3>Több kép, összefüggő galériaként</h3>
                         <div class="gallery">
                             <figure class="media media-img">
@@ -244,6 +376,32 @@ for (x in person) {
                                 <figcaption>Összefüggő galéria 3. képe</figcaption>
                             </figure>
                         </div>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;div class=&quot;gallery&quot;&gt;
+    &lt;figure class=&quot;media media-img&quot;&gt;
+        &lt;a href=&quot;Pictures/pelda_kep2_nagy.png&quot; data-size=&quot;3000x2900&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot; alt=&quot;&quot; width=&quot;150&quot;/&gt;
+        &lt;/a&gt;
+        &lt;span class=&quot;glyphicon glyphicon-zoom-in zoom-btn&quot;&gt;&lt;/span&gt;
+        &lt;figcaption&gt;&Ouml;sszef&uuml;ggő gal&eacute;ria 1. k&eacute;pe&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;media media-img&quot;&gt;
+        &lt;a href=&quot;Pictures/pelda_kep2_nagy.png&quot; data-size=&quot;3000x2900&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot; alt=&quot;&quot; width=&quot;150&quot;/&gt;
+        &lt;/a&gt;
+        &lt;span class=&quot;glyphicon glyphicon-zoom-in zoom-btn&quot;&gt;&lt;/span&gt;
+        &lt;figcaption&gt;&Ouml;sszef&uuml;ggő gal&eacute;ria 2. k&eacute;pe&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;media media-img&quot;&gt;
+        &lt;a href=&quot;Pictures/pelda_kep2_nagy.png&quot; data-size=&quot;3000x2900&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot; alt=&quot;&quot; width=&quot;150&quot;/&gt;
+        &lt;/a&gt;
+        &lt;span class=&quot;glyphicon glyphicon-zoom-in zoom-btn&quot;&gt;&lt;/span&gt;
+        &lt;figcaption&gt;&Ouml;sszef&uuml;ggő gal&eacute;ria 3. k&eacute;pe&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
                         <h3>Galéria lapozós megjelenéssel</h3>
                         <figure class="media media-img">
                             <div class="Lapozó">
@@ -262,6 +420,26 @@ for (x in person) {
                             </div>
                             <figcaption>Lapozó galéria minta ábra</figcaption>
                         </figure>
+                        <div class="row">
+                            <pre class="snippet col-xs-10 col-xs-offset-1"><code class="html">&lt;figure class=&quot;media media-img&quot;&gt;
+    &lt;div class=&quot;Lapoz&oacute;&quot;&gt;
+        &lt;div class=&quot;Lapoz&oacute;_elem&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot;&gt;
+            &lt;p&gt;K&eacute;pal&aacute;&iacute;r&aacute;s 1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Lapoz&oacute;_elem&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot;&gt;
+            &lt;p&gt;K&eacute;pal&aacute;&iacute;r&aacute;s 2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;Lapoz&oacute;_elem&quot;&gt;
+            &lt;img src=&quot;Pictures/pelda_kep2_kicsi.png&quot;&gt;
+            &lt;p&gt;K&eacute;pal&aacute;&iacute;r&aacute;s 3&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;figcaption&gt;Lapoz&oacute; gal&eacute;ria minta &aacute;bra&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                        </div>
+
 
                     </section>
 

@@ -3,7 +3,12 @@
 var itemList = [];
 
 $(document).ready(function () {
-	"use strict";
+    "use strict";
+
+    $('pre code').each(function (i, block) {
+        hljs.highlightBlock(block);
+    });
+
     $(".Fontos").prepend('<div class="legend_row"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Fontos!</div>');
 	$(".Megjegyzés").prepend('<div class="legend_row"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Megjegyzés</div>'); 
 	$(".Definíció").prepend('<div class="legend_row"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>Definíció</div>'); 
